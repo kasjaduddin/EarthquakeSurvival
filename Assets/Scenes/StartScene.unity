@@ -755,6 +755,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 63034096}
+  - component: {fileID: 63034097}
   m_Layer: 0
   m_Name: Credit
   m_TagString: Untagged
@@ -783,6 +784,24 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3840, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &63034097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63034095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d5b72488ca21d54aab0f9f52dd82f62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Title: {fileID: 634137904}
+  Body: {fileID: 2002406785}
+  ButtonText: {fileID: 777522149}
+  GameName: {fileID: 1827677281}
+  MainMenuButton: {fileID: 22884444}
+  CreditPage: {fileID: 63034095}
 --- !u!1 &82305749
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,9 +1263,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Unity.VRTemplate.StepManager, Assembly-CSharp
-        m_MethodName: Next
+      - m_Target: {fileID: 63034097}
+        m_TargetAssemblyTypeName: CreditController, Assembly-CSharp
+        m_MethodName: NextCredit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2232,7 +2251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: DROP
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2259,8 +2278,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 280
-  m_fontSizeBase: 280
+  m_fontSize: 250
+  m_fontSizeBase: 250
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -6353,7 +6372,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 63034095}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -8558,7 +8577,7 @@ GameObject:
   - component: {fileID: 2002406786}
   - component: {fileID: 2002406785}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8580,7 +8599,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -300}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 3000, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2002406785
@@ -8603,8 +8622,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Keseimbangan adalah kunci menghindari cedera. Jaga keseimbanganmu selagi
-    mencari tempat berlindung!
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8631,8 +8649,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 90
+  m_fontSizeBase: 90
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

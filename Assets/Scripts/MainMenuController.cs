@@ -22,10 +22,6 @@ public class MainMenuController : MonoBehaviour
         canvasPosition.y = cameraY;
         canvas.transform.position = canvasPosition;
     }
-    public void OpenSafetyBook()
-    {
-        Debug.Log("Opened Book");
-    }
     public void QuitGame()
     {
         Application.Quit();
