@@ -427,6 +427,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!4 &684270604 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6342056524648874463, guid: 7a66d0e99c61f0b4d9c05322bff7b2a3, type: 3}
+  m_PrefabInstance: {fileID: 2518568623855779325}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &714409699 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1293578434235397225, guid: f2f4cc70f8afc444cb64f7c3fdd60ab7, type: 3}
@@ -1044,7 +1049,7 @@ Transform:
   - {fileID: 1601069203}
   - {fileID: 1305790210}
   - {fileID: 1276850106}
-  - {fileID: 2136755581}
+  - {fileID: 684270604}
   - {fileID: 1145979026}
   m_Father: {fileID: 1465572168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1397,11 +1402,6 @@ Transform:
   - {fileID: 961510101}
   m_Father: {fileID: 1465572168}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &2136755581 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1163564281743194528, guid: 7a66d0e99c61f0b4d9c05322bff7b2a3, type: 3}
-  m_PrefabInstance: {fileID: 2518568623855779325}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2518568623855779325
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1414,6 +1414,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bedroom
       objectReference: {fileID: 0}
+    - target: {fileID: 1072892563949149093, guid: 7a66d0e99c61f0b4d9c05322bff7b2a3, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 66af6ce1af2383b4aa468f86a3e8191f, type: 2}
     - target: {fileID: 1163564281743194528, guid: 7a66d0e99c61f0b4d9c05322bff7b2a3, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1514,6 +1518,10 @@ PrefabInstance:
     - target: {fileID: 8000309618444107011, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8577172094854887044, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.67
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
