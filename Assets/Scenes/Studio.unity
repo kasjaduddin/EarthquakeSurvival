@@ -518,9 +518,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5697911018103311690, guid: dc2516c0544ae174a90d5b5538a8116d, type: 3}
   m_PrefabInstance: {fileID: 4269226541939336588}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1204309988 stripped
+--- !u!4 &1276850106 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 8000309618444107011, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+  m_CorrespondingSourceObject: {fileID: 857790153373707041, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
   m_PrefabInstance: {fileID: 2619054072646242916}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1305790209
@@ -1043,7 +1043,7 @@ Transform:
   m_Children:
   - {fileID: 1601069203}
   - {fileID: 1305790210}
-  - {fileID: 1204309988}
+  - {fileID: 1276850106}
   - {fileID: 2136755581}
   - {fileID: 1145979026}
   m_Father: {fileID: 1465572168}
@@ -1471,6 +1471,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Livingroom
       objectReference: {fileID: 0}
+    - target: {fileID: 6703422558636028251, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 66af6ce1af2383b4aa468f86a3e8191f, type: 2}
     - target: {fileID: 8000309618444107011, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
