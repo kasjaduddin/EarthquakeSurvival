@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using TMPro;
+using UnityEngine.Video;
 
 public class LivingroomController : MonoBehaviour
 {
@@ -18,9 +19,12 @@ public class LivingroomController : MonoBehaviour
     private GameObject Menu;
     [SerializeField]
     private List<TextMeshProUGUI> Message;
-
+    [SerializeField]
+    private GameObject Video;
+    
     private Animator HouseAnimator;
     private Animator FurnitureAnimator;
+    
 
     private int highScore;
 
@@ -40,11 +44,12 @@ public class LivingroomController : MonoBehaviour
         {
             StopSimulation();
             WinEnding();
-            Debug.Log("Win");
         }
         else if (playerPosition.x < 7.5)
         {
             StopSimulation();
+            VideoPlayer videoPlayer = Video.GetComponent<VideoPlayer>();
+            
             Debug.Log("Jangan Keluar Ruangan");
 
             if (highScore < 25)
@@ -63,10 +68,7 @@ public class LivingroomController : MonoBehaviour
             Message[1].text = 00.ToString();
             Message[2].text = "Carilah Tempat Berlindung";
         }
-        else
-        Debug.Log("Player Position: X = " + playerPosition.x + " --- Y = " + playerPosition.y + " --- Z = " + playerPosition.z);
     }
-
     private void PlaySimulation()
     {
         HouseAnimator = House.GetComponent<Animator>();
