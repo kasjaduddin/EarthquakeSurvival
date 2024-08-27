@@ -14,60 +14,37 @@ public class LivingroomController : MonoBehaviour
     [SerializeField]
     private GameObject Player;
     [SerializeField] 
-    private TextMeshProUGUI Alert;
+    private List<TextMeshProUGUI> Alert;
     [SerializeField]
     private GameObject Menu;
     [SerializeField]
     private List<TextMeshProUGUI> Message;
     [SerializeField]
     private GameObject Video;
-    
+    [SerializeField]
+    private VideoClip ExitRoom;
+    [SerializeField]
+    private VideoClip DoNothing;
+
     private Animator HouseAnimator;
     private Animator FurnitureAnimator;
-    
+    private VideoPlayer videoPlayer;
 
     private int highScore;
-
     private float startTime;
+    private bool ending;
     void Start()
     {
-        startTime = Time.time;
-
-        PlaySimulation();
-
+        videoPlayer = Video.GetComponentInChildren<VideoPlayer>();
         highScore = PlayerPrefs.GetInt("FirstHighScore");
+        startTime = Time.time;
+        ending = false;
+        PlaySimulation();
     }
     void Update()
     {
-        Vector3 playerPosition = Player.transform.position;
-        if (playerPosition.x < 11 && playerPosition.z < 4.2)
-        {
-            StopSimulation();
-            WinEnding();
-        }
-        else if (playerPosition.x < 7.5)
-        {
-            StopSimulation();
-            VideoPlayer videoPlayer = Video.GetComponent<VideoPlayer>();
-            
-            Debug.Log("Jangan Keluar Ruangan");
-
-            if (highScore < 25)
-                PlayerPrefs.SetInt("FirstHighScore", 25);
-
-            Message[0].text = "HATI-HATI!";
-            Message[1].text = 25.ToString();
-            Message[2].text = "Sebaiknya Tetap Dalam Ruangan Hingga Kondisi Membaik";
-        }
-        else if (Time.time - startTime >= 20f)
-        {
-            StopSimulation();
-            Debug.Log("Cari Tempat Berlindung");
-
-            Message[0].text = "ADUH!";
-            Message[1].text = 00.ToString();
-            Message[2].text = "Carilah Tempat Berlindung";
-        }
+        if (!ending)
+            DetermineEnding();
     }
     private void PlaySimulation()
     {
@@ -85,8 +62,47 @@ public class LivingroomController : MonoBehaviour
         HouseAnimator.enabled = false;
         FurnitureAnimator.enabled = false;
 
-        Alert.text = "";
+        Alert[0].text = Alert[1].text = "";
         Menu.SetActive(true);
+    }
+    private void DetermineEnding()
+    {
+        Vector3 playerPosition = Player.transform.position;
+        if (playerPosition.x < 11 && playerPosition.z < 4.5)
+        {
+            StopSimulation();
+            WinEnding();
+            ending = true;
+        }
+        else if (playerPosition.x < 7.5)
+        {
+            StopSimulation();
+            videoPlayer.clip = ExitRoom;
+            videoPlayer.Play();
+            Debug.Log("Jangan Keluar Ruangan");
+
+            if (highScore < 25)
+                PlayerPrefs.SetInt("FirstHighScore", 25);
+
+            Message[0].text = "HATI-HATI!";
+            Message[1].text = 25.ToString();
+            Message[2].text = "Sebaiknya Tetap Dalam Ruangan Hingga Kondisi Membaik";
+            Invoke("ShowPoint", 1.8f);
+            ending = true;
+        }
+        else if (Time.time - startTime >= 45f)
+        {
+            StopSimulation();
+            videoPlayer.clip = DoNothing;
+            videoPlayer.Play();
+            Debug.Log("Cari Tempat Berlindung");
+
+            Message[0].text = "ADUH!";
+            Message[1].text = 00.ToString();
+            Message[2].text = "Carilah Tempat Berlindung";
+            Invoke("ShowPoint", 1.8f);
+            ending = true;
+        }
     }
     private void WinEnding()
     {
@@ -96,5 +112,9 @@ public class LivingroomController : MonoBehaviour
         Message[0].text = "HEBAT!";
         Message[1].text = 100.ToString();
         Message[2].text = "Meja Dapat Menjadi Tempat Berlindung";
+    }
+    void ShowPoint()
+    {
+        Video.SetActive(false);
     }
 }

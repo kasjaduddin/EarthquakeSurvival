@@ -5286,13 +5286,17 @@ MonoBehaviour:
   House: {fileID: 440876736}
   Furniture: {fileID: 468287409}
   Player: {fileID: 1729908189}
-  Alert: {fileID: 1264839877}
+  Alert:
+  - {fileID: 1750049485}
+  - {fileID: 1264839877}
   Menu: {fileID: 1631531391}
   Message:
   - {fileID: 1827677283}
   - {fileID: 322512419}
   - {fileID: 2031583415}
-  Video: {fileID: 0}
+  Video: {fileID: 1867629006}
+  ExitRoom: {fileID: 32900000, guid: 30998b9782b5a3246b2c9841aaa0d82a, type: 3}
+  DoNothing: {fileID: 32900000, guid: a6de25faad2f62b4c8492735d8f556ff, type: 3}
 --- !u!1 &1478984074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2203472148914562548, guid: 57b679195c7e43845a96beaaedc6948f, type: 3}
@@ -6046,6 +6050,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8298045291338814966, guid: 77e7c27b2c5525e4aa8cc9f99d654486, type: 3}
   m_PrefabInstance: {fileID: 1222785871}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1750049485 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1937621884780821476, guid: eca1164a5fcc537409b3e96c23bdc87d, type: 3}
+  m_PrefabInstance: {fileID: 6217331495077607563}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1750873601
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6688,6 +6703,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4579454407841743219, guid: 4f189e934da56bf40bd84a80686cc1bd, type: 3}
+--- !u!1 &1867629006 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1462133593420387746, guid: eca1164a5fcc537409b3e96c23bdc87d, type: 3}
+  m_PrefabInstance: {fileID: 6217331495077607563}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1906411031 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2562138678977562961, guid: 57b679195c7e43845a96beaaedc6948f, type: 3}
@@ -7535,9 +7555,13 @@ PrefabInstance:
     - target: {fileID: 6509818924789990175, guid: eca1164a5fcc537409b3e96c23bdc87d, type: 3}
       propertyPath: m_VideoClip
       value: 
-      objectReference: {fileID: 32900000, guid: 30998b9782b5a3246b2c9841aaa0d82a, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 6509818924789990175, guid: eca1164a5fcc537409b3e96c23bdc87d, type: 3}
       propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6509818924789990175, guid: eca1164a5fcc537409b3e96c23bdc87d, type: 3}
+      propertyPath: m_WaitForFirstFrame
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6727774695823027105, guid: eca1164a5fcc537409b3e96c23bdc87d, type: 3}
