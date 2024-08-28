@@ -14460,6 +14460,10 @@ PrefabInstance:
       value: Trees
       objectReference: {fileID: 0}
     - target: {fileID: 6969827502051703535, guid: d0c7c228bf9d80f4eac446f82a7cc09f, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6969827502051703535, guid: d0c7c228bf9d80f4eac446f82a7cc09f, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 66af6ce1af2383b4aa468f86a3e8191f, type: 2}
