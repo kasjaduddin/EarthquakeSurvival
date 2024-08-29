@@ -85,6 +85,9 @@ public class KitchenController : MonoBehaviour
                     videoPlayer.Play();
                     Debug.Log("Cari Tempat Berlindung");
 
+                    if (highScore < 50)
+                        PlayerPrefs.SetInt("SecondHighScore", 50);
+
                     Message[0].text = "ADUH!";
                     Message[1].text = 50.ToString();
                     Message[2].text = "Carilah Tempat Berlindung";
@@ -113,7 +116,7 @@ public class KitchenController : MonoBehaviour
     private void WinEnding()
     {
         if (highScore < 100)
-            PlayerPrefs.SetInt("FirstHighScore", 100);
+            PlayerPrefs.SetInt("SecondHighScore", 100);
 
         Message[0].text = "Kerja Bagus!";
         Message[1].text = 100.ToString();

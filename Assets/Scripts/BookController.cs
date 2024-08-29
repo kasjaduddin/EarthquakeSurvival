@@ -57,7 +57,7 @@ public class BookController : MonoBehaviour
         Guide[5, 0] = "TURN OFF FIRE";
         Guide[5, 1] = "Perhatikan api, air, dan listrik! Pastikan tidak terjadi bencana lain karena kelalaian";
         Guide[6, 0] = "AVOID TREE";
-        Guide[6, 1] = "Tetaplah di ruang terbuka! Pohon, tiang, hingga bangunan bisa saja terjatuh";
+        Guide[6, 1] = "Tetaplah di ruang terbuka! Pohon, tiang, ataupun bangunan bisa saja terjatuh";
     }
     private void GetUnlockedGuide()
     {

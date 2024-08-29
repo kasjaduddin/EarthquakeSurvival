@@ -51,8 +51,7 @@ public class OutdoorController : MonoBehaviour
         HouseAnimator.enabled = true;
         TreesAnimator.enabled = true;
 
-        HouseAnimator.Play("TreesAnimation");
-        TreesAnimator.Play("LivingroomAnimation");
+        TreesAnimator.Play("TreesAnimation");
     }
     private void StopSimulation()
     {
@@ -65,50 +64,58 @@ public class OutdoorController : MonoBehaviour
     private void DetermineEnding()
     {
         Vector3 playerPosition = Player.transform.position;
-        if (playerPosition.x < 11 && playerPosition.z < 4.5)
-        {
-            StopSimulation();
-            WinEnding();
-            ending = true;
-        }
-        else if (playerPosition.x < 7.5)
+        if (AroundSectorOne(playerPosition) || AroundSectorTwo(playerPosition) || AroundSectorThree(playerPosition))
         {
             StopSimulation();
             videoPlayer.clip = AroundTree;
             videoPlayer.Play();
-            Debug.Log("Jangan Keluar Ruangan");
+            Debug.Log("");
 
-            if (highScore < 25)
-                PlayerPrefs.SetInt("FirstHighScore", 25);
-
-            Message[0].text = "HATI-HATI!";
-            Message[1].text = 25.ToString();
-            Message[2].text = "Sebaiknya Tetap Dalam Ruangan Hingga Kondisi Membaik";
-            Invoke("ShowPoint", 1.8f);
-            ending = true;
-        }
-        else if (Time.time - startTime >= 45f)
-        {
-            StopSimulation();
-            videoPlayer.clip = AroundTree;
-            videoPlayer.Play();
-            Debug.Log("Cari Tempat Berlindung");
-
-            Message[0].text = "ADUH!";
+            Message[0].text = "AWAS!";
             Message[1].text = 00.ToString();
-            Message[2].text = "Carilah Tempat Berlindung";
+            Message[2].text = "Pohon, Tiang, Ataupun Bangunan Bisa Saja Terjatuh";
             Invoke("ShowPoint", 1.8f);
             ending = true;
         }
+        else 
+        {
+            if (Time.time - startTime >= 45f)
+            {
+                StopSimulation();
+                WinEnding();
+                ending = true;
+            }
+        }
+    }
+    private bool AroundSectorOne(Vector3 playerPosition)
+    {
+        if (playerPosition.x > 65f)
+            return true;
+        else
+            return false;
+    }
+    private bool AroundSectorTwo(Vector3 playerPosition)
+    {
+        if ((playerPosition.x < 25f && playerPosition.x > 15f) && playerPosition.z > 55f)
+            return true;
+        else 
+            return false;
+    }
+    private bool AroundSectorThree(Vector3 playerPosition)
+    {
+        if ((playerPosition.x < -5f && playerPosition.x > -15f) && playerPosition.z > 55f)
+            return true;
+        else
+            return false;
     }
     private void WinEnding()
     {
         if (highScore < 100)
-            PlayerPrefs.SetInt("FirstHighScore", 100);
+            PlayerPrefs.SetInt("FourthHighScore", 100);
 
-        Message[0].text = "HEBAT!";
+        Message[0].text = "Pilihan Bijak!";
         Message[1].text = 100.ToString();
-        Message[2].text = "Meja Dapat Menjadi Tempat Berlindung";
+        Message[2].text = "Ruang Terbuka Adalah Tempat Paling Aman";
     }
     void ShowPoint()
     {
