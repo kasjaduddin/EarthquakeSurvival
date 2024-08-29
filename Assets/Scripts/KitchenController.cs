@@ -26,6 +26,8 @@ public class KitchenController : MonoBehaviour
     private VideoClip DoesntTurnOffStove;
     [SerializeField]
     private VideoClip JustTurnOffStove;
+    [SerializeField]
+    private GameObject MoveController;
 
     private Animator HouseAnimator;
     private Animator FurnitureAnimator;
@@ -46,6 +48,8 @@ public class KitchenController : MonoBehaviour
     {
         if (!ending)
             DetermineEnding();
+        else
+            MoveController.SetActive(false);
     }
     private void PlaySimulation()
     {

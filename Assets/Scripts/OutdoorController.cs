@@ -22,6 +22,8 @@ public class OutdoorController : MonoBehaviour
     private GameObject Video;
     [SerializeField]
     private VideoClip AroundTree;
+    [SerializeField]
+    private GameObject MoveController;
 
     private Animator HouseAnimator;
     private Animator TreesAnimator;
@@ -42,6 +44,8 @@ public class OutdoorController : MonoBehaviour
     {
         if (!ending)
             DetermineEnding();
+        else
+            MoveController.SetActive(false);
     }
     private void PlaySimulation()
     {

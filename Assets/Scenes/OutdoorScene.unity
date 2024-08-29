@@ -4990,6 +4990,7 @@ MonoBehaviour:
   - {fileID: 540442888}
   Video: {fileID: 401094073}
   AroundTree: {fileID: 32900000, guid: 8176de60568ff274a91598498718c7fd, type: 3}
+  MoveController: {fileID: 2120461996}
 --- !u!1 &1475678055 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3548687788788115834, guid: 57b679195c7e43845a96beaaedc6948f, type: 3}
@@ -6900,7 +6901,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 1252846267}
   m_TransformationPriority: 0
-  m_MoveSpeed: 2.5
+  m_MoveSpeed: 3
   m_EnableStrafe: 1
   m_EnableFly: 0
   m_UseGravity: 1

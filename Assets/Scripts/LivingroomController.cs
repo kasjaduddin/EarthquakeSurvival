@@ -25,6 +25,8 @@ public class LivingroomController : MonoBehaviour
     private VideoClip ExitRoom;
     [SerializeField]
     private VideoClip DoNothing;
+    [SerializeField]
+    private GameObject MoveController;
 
     private Animator HouseAnimator;
     private Animator FurnitureAnimator;
@@ -45,6 +47,8 @@ public class LivingroomController : MonoBehaviour
     {
         if (!ending)
             DetermineEnding();
+        else
+            MoveController.SetActive(false);
     }
     private void PlaySimulation()
     {

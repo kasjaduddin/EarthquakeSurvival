@@ -6189,6 +6189,7 @@ MonoBehaviour:
   Fire: {fileID: 955880268}
   DoesntTurnOffStove: {fileID: 32900000, guid: 8c6bb0ab60a46044fa9f143470075b36, type: 3}
   JustTurnOffStove: {fileID: 32900000, guid: 61ac16bfaa74b77469e9264aea9fb38d, type: 3}
+  MoveController: {fileID: 2120461996}
 --- !u!1001 &1488018567
 PrefabInstance:
   m_ObjectHideFlags: 0

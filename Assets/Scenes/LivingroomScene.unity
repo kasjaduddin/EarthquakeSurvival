@@ -5297,6 +5297,7 @@ MonoBehaviour:
   Video: {fileID: 1867629006}
   ExitRoom: {fileID: 32900000, guid: 30998b9782b5a3246b2c9841aaa0d82a, type: 3}
   DoNothing: {fileID: 32900000, guid: a6de25faad2f62b4c8492735d8f556ff, type: 3}
+  MoveController: {fileID: 2120461996}
 --- !u!1 &1478984074 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2203472148914562548, guid: 57b679195c7e43845a96beaaedc6948f, type: 3}
