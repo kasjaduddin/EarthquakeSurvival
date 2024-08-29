@@ -37,7 +37,7 @@ public class KitchenController : MonoBehaviour
     void Start()
     {
         videoPlayer = Video.GetComponentInChildren<VideoPlayer>();
-        highScore = PlayerPrefs.GetInt("FirstHighScore");
+        highScore = PlayerPrefs.GetInt("SecondHighScore");
         startTime = Time.time;
         ending = false;
         PlaySimulation();
@@ -55,7 +55,6 @@ public class KitchenController : MonoBehaviour
         HouseAnimator.enabled = true;
         FurnitureAnimator.enabled = true;
 
-        HouseAnimator.Play("FurnitureAnimator");
         FurnitureAnimator.Play("KitchenAnimation");
     }
     private void StopSimulation()
@@ -71,7 +70,6 @@ public class KitchenController : MonoBehaviour
         Vector3 playerPosition = Player.transform.position;
         if (!Fire.activeSelf)
         {
-            Debug.Log(playerPosition.x);
             if (playerPosition.z > 80f && (playerPosition.x > 2f && playerPosition.x < 6.5f))
             {
                 StopSimulation();
@@ -97,7 +95,6 @@ public class KitchenController : MonoBehaviour
         }
         else 
         {
-            Debug.Log("Kompor hidup");
             if (Time.time - startTime >= 30f)
             {
                 StopSimulation();

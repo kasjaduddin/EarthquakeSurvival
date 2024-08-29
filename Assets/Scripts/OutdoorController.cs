@@ -1,19 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 using TMPro;
+using UnityEngine;
 using UnityEngine.Video;
 
-public class LivingroomController : MonoBehaviour
+public class OutdoorController : MonoBehaviour
 {
     [SerializeField]
     private GameObject House;
     [SerializeField]
-    private GameObject Furniture;
+    private GameObject Trees;
     [SerializeField]
     private GameObject Player;
-    [SerializeField] 
+    [SerializeField]
     private List<TextMeshProUGUI> Alert;
     [SerializeField]
     private GameObject Menu;
@@ -22,12 +21,10 @@ public class LivingroomController : MonoBehaviour
     [SerializeField]
     private GameObject Video;
     [SerializeField]
-    private VideoClip ExitRoom;
-    [SerializeField]
-    private VideoClip DoNothing;
+    private VideoClip AroundTree;
 
     private Animator HouseAnimator;
-    private Animator FurnitureAnimator;
+    private Animator TreesAnimator;
     private VideoPlayer videoPlayer;
 
     private int highScore;
@@ -36,7 +33,7 @@ public class LivingroomController : MonoBehaviour
     void Start()
     {
         videoPlayer = Video.GetComponentInChildren<VideoPlayer>();
-        highScore = PlayerPrefs.GetInt("FirstHighScore");
+        highScore = PlayerPrefs.GetInt("FourthHighScore");
         startTime = Time.time;
         ending = false;
         PlaySimulation();
@@ -49,17 +46,18 @@ public class LivingroomController : MonoBehaviour
     private void PlaySimulation()
     {
         HouseAnimator = House.GetComponent<Animator>();
-        FurnitureAnimator = Furniture.GetComponent<Animator>();
+        TreesAnimator = Trees.GetComponent<Animator>();
 
         HouseAnimator.enabled = true;
-        FurnitureAnimator.enabled = true;
+        TreesAnimator.enabled = true;
 
-        FurnitureAnimator.Play("LivingroomAnimation");
+        HouseAnimator.Play("TreesAnimation");
+        TreesAnimator.Play("LivingroomAnimation");
     }
     private void StopSimulation()
     {
         HouseAnimator.enabled = false;
-        FurnitureAnimator.enabled = false;
+        TreesAnimator.enabled = false;
 
         Alert[0].text = Alert[1].text = "";
         Menu.SetActive(true);
@@ -76,7 +74,7 @@ public class LivingroomController : MonoBehaviour
         else if (playerPosition.x < 7.5)
         {
             StopSimulation();
-            videoPlayer.clip = ExitRoom;
+            videoPlayer.clip = AroundTree;
             videoPlayer.Play();
             Debug.Log("Jangan Keluar Ruangan");
 
@@ -92,7 +90,7 @@ public class LivingroomController : MonoBehaviour
         else if (Time.time - startTime >= 45f)
         {
             StopSimulation();
-            videoPlayer.clip = DoNothing;
+            videoPlayer.clip = AroundTree;
             videoPlayer.Play();
             Debug.Log("Cari Tempat Berlindung");
 
