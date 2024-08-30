@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
@@ -54,20 +55,20 @@ public class MainMenuController : MonoBehaviour
         ChapterScore.text = "HIGHSCORE: " + highScore[3].ToString();
     }
     public void PlayChapterOne() 
-    { 
-
+    {
+        SceneManager.LoadScene("LivingroomScene");
     }
     public void PlayChapterTwo()
     {
-
+        SceneManager.LoadScene("KitchenScene");
     }
     public void PlayChapterThree()
     {
-
+        SceneManager.LoadScene("BedroomScene");
     }
     public void PlayChapterFour()
     {
-
+        SceneManager.LoadScene("OutdoorScene");
     }
     public void PointerExitChapterButton()
     {
