@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6087114591553074251}
   - component: {fileID: 3814964247735613100}
   - component: {fileID: 5424850672851724735}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 5448693408355408774}
   - component: {fileID: 3035121795612916665}
   - component: {fileID: 1988587916343922610}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Main Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 810895640998054810}
   - component: {fileID: 8215325453290646547}
   - component: {fileID: 1286855609186700065}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -420,7 +420,7 @@ GameObject:
   - component: {fileID: 5028554543078902238}
   - component: {fileID: 2738053785653564604}
   - component: {fileID: 5193278193804009509}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -490,7 +490,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6775262584855243860}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Video Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7196962480676877673}
   - component: {fileID: 415101470743476597}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Guide and Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -871,7 +871,7 @@ GameObject:
   - component: {fileID: 896168349858021934}
   - component: {fileID: 8179741428881212413}
   - component: {fileID: 4412731023201809351}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Border
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4129993983914043203}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1209,7 +1209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6191676905154050879}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Alert
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1248,7 +1248,7 @@ GameObject:
   - component: {fileID: 1131901048968492170}
   - component: {fileID: 3101483657465145457}
   - component: {fileID: 1937621884780821476}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Sign
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1382,7 +1382,7 @@ GameObject:
   - component: {fileID: 1496122516215268280}
   - component: {fileID: 6509818924789990175}
   - component: {fileID: 6039357120460651125}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Video
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1540,7 @@ GameObject:
   - component: {fileID: 6277834598516171200}
   - component: {fileID: 6570069776908047808}
   - component: {fileID: 3412226461342639465}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1672,7 +1672,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5018985827858439262}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2219,7 +2219,7 @@ GameObject:
   - component: {fileID: 2125507810563650810}
   - component: {fileID: 7356698795672239324}
   - component: {fileID: 2638653441012338718}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background Color
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2292,7 +2292,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7541899398787944172}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2336,7 +2336,7 @@ GameObject:
   - component: {fileID: 1983146072712985258}
   - component: {fileID: 1044494719076263758}
   - component: {fileID: 836366966955357536}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2725,7 +2725,7 @@ GameObject:
   - component: {fileID: 1508785596141111323}
   - component: {fileID: 2011316105962837195}
   - component: {fileID: 2075369256718570885}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Suggestion Message
   m_TagString: Untagged
   m_Icon: {fileID: 0}

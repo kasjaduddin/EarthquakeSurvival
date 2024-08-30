@@ -21,6 +21,8 @@ public class BedroomController : MonoBehaviour
     [SerializeField]
     private GameObject Pillow;
     [SerializeField]
+    private GameObject PlayerCamera;
+    [SerializeField]
     private GameObject LeftController;
     [SerializeField]
     private GameObject RightController;
@@ -45,13 +47,14 @@ public class BedroomController : MonoBehaviour
     {
         videoPlayer = Video.GetComponentInChildren<VideoPlayer>();
         highScore = PlayerPrefs.GetInt("ThirdHighScore");
-        headPosition = GetHeadPosition();
+        
         startTime = Time.time;
         ending = false;
         PlaySimulation();
     }
     void Update()
     {
+        headPosition = GetHeadPosition();
         if (!ending)
             DetermineEnding();
         else
@@ -78,13 +81,13 @@ public class BedroomController : MonoBehaviour
     private void DetermineEnding()
     {
         Vector3 playerPosition = Player.transform.position;
-        if (GrabPillow() && CoverHeadWithPillow())
+        if (CoverHeadWithPillow())
         {
             StopSimulation();
             WinEnding();
             ending = true;
         }
-        else if (playerPosition.x < -12f && playerPosition.z < -10f)
+        else if (playerPosition.x < 0f && playerPosition.z < -2.5f)
         {
             StopSimulation();
             videoPlayer.clip = AroundFragle;
@@ -118,23 +121,24 @@ public class BedroomController : MonoBehaviour
     }
     private float GetHeadPosition()
     {
-        Camera camera = Camera.main;
-        return camera.transform.position.y;
+        return PlayerCamera.transform.position.y;
     }
     private bool GrabPillow()
     {
         float leftHandOffset = Vector3.Distance(Pillow.transform.position, LeftController.transform.position);
         float rightHandOffset = Vector3.Distance(Pillow.transform.position, RightController.transform.position);
-        if ((leftHandOffset > 0 && leftHandOffset < 2) || (rightHandOffset > 0 && rightHandOffset < 2))
-            return true; 
-        else 
+        if (leftHandOffset < .65f || rightHandOffset < .65f)
+            return true;
+        else
             return false;
     }
     private bool CoverHeadWithPillow()
     {
         float leftHandPositionY = LeftController.transform.position.y;
         float rightHandPositionY = RightController.transform.position.y;
-        if ((leftHandPositionY > headPosition) || (rightHandPositionY > headPosition))
+        float pillowPosition = Pillow.transform.position.y - .7f;
+        Debug.Log(pillowPosition + "\n" + headPosition);
+        if (pillowPosition > headPosition)
             return true;
         else
             return false;
