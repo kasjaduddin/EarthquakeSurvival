@@ -73,7 +73,9 @@ public class OutdoorController : MonoBehaviour
             StopSimulation();
             videoPlayer.clip = AroundTree;
             videoPlayer.Play();
-            Debug.Log("");
+
+            if (PlayerPrefs.GetInt("SeventhGuide") != 1)
+                PlayerPrefs.SetInt("SeventhGuide", 1);
 
             Message[0].text = "AWAS!";
             Message[1].text = 00.ToString();
@@ -93,21 +95,21 @@ public class OutdoorController : MonoBehaviour
     }
     private bool AroundSectorOne(Vector3 playerPosition)
     {
-        if (playerPosition.x > 65f)
+        if (playerPosition.x > 50f)
             return true;
         else
             return false;
     }
     private bool AroundSectorTwo(Vector3 playerPosition)
     {
-        if ((playerPosition.x < 25f && playerPosition.x > 15f) && playerPosition.z > 55f)
+        if ((playerPosition.x < 22f && playerPosition.x > 12f) && playerPosition.z > 55f)
             return true;
         else 
             return false;
     }
     private bool AroundSectorThree(Vector3 playerPosition)
     {
-        if ((playerPosition.x < -5f && playerPosition.x > -15f) && playerPosition.z > 55f)
+        if ((playerPosition.x < -3f && playerPosition.x > -13f) && playerPosition.z > 55f)
             return true;
         else
             return false;

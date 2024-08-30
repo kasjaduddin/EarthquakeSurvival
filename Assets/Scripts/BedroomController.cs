@@ -89,7 +89,9 @@ public class BedroomController : MonoBehaviour
             StopSimulation();
             videoPlayer.clip = AroundFragle;
             videoPlayer.Play();
-            Debug.Log("PERHATIKAN SEKITAR!");
+
+            if (PlayerPrefs.GetInt("SixthGuide") != 1)
+                PlayerPrefs.SetInt("SixthGuide", 1);
 
             if (highScore < 25)
                 PlayerPrefs.SetInt("ThirdHighScore", 25);

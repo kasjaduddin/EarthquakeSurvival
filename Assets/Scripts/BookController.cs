@@ -38,10 +38,6 @@ public class BookController : MonoBehaviour
         GetUnlockedGuide();
         ShowGuide(guideIndex);
     }
-    void Update()
-    {
-        
-    }
     private void AssignGuide()
     {
         Guide[0, 0] = "DROP";
@@ -52,10 +48,10 @@ public class BookController : MonoBehaviour
         Guide[2, 1] = "Berpeganglah pada benda yang melindungimu! Pastikan dirimu tetap terlindungi";
         Guide[3, 0] = "STAY INDOOR";
         Guide[3, 1] = "Tidak ada yang tahu kondisi di luar. Sebaiknya tetap dalam ruangan hingga kondisi membaik";
-        Guide[4, 0] = "AVOID FRAGLE";
-        Guide[4, 1] = "Gempa mampu memberi guncangan yang besar. Jauhi benda-benda yang mudah pecah dan terjatuh";
-        Guide[5, 0] = "TURN OFF FIRE";
-        Guide[5, 1] = "Perhatikan api, air, dan listrik! Pastikan tidak terjadi bencana lain karena kelalaian";
+        Guide[4, 0] = "TURN OFF FIRE";
+        Guide[4, 1] = "Perhatikan api, air, dan listrik! Pastikan tidak terjadi bencana lain karena kelalaian";
+        Guide[5, 0] = "AVOID FRAGLE";
+        Guide[5, 1] = "Gempa mampu memberi guncangan yang besar. Jauhi benda-benda yang mudah pecah dan terjatuh";
         Guide[6, 0] = "AVOID TREE";
         Guide[6, 1] = "Tetaplah di ruang terbuka! Pohon, tiang, ataupun bangunan bisa saja terjatuh";
     }

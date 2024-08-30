@@ -87,7 +87,6 @@ public class KitchenController : MonoBehaviour
                     StopSimulation();
                     videoPlayer.clip = JustTurnOffStove;
                     videoPlayer.Play();
-                    Debug.Log("Cari Tempat Berlindung");
 
                     if (highScore < 50)
                         PlayerPrefs.SetInt("SecondHighScore", 50);
@@ -107,7 +106,9 @@ public class KitchenController : MonoBehaviour
                 StopSimulation();
                 videoPlayer.clip = DoesntTurnOffStove;
                 videoPlayer.Play();
-                Debug.Log("Matikan api sebelum melakukan evakuasi");
+
+                if (PlayerPrefs.GetInt("FifthGuide") != 1)
+                    PlayerPrefs.SetInt("FifthGuide", 1);
 
                 Message[0].text = "KEBAKARAN!";
                 Message[1].text = 00.ToString();

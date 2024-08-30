@@ -82,7 +82,9 @@ public class LivingroomController : MonoBehaviour
             StopSimulation();
             videoPlayer.clip = ExitRoom;
             videoPlayer.Play();
-            Debug.Log("Jangan Keluar Ruangan");
+
+            if (PlayerPrefs.GetInt("FourthGuide") != 1)
+                PlayerPrefs.SetInt("FourthGuide", 1);
 
             if (highScore < 25)
                 PlayerPrefs.SetInt("FirstHighScore", 25);
@@ -98,7 +100,6 @@ public class LivingroomController : MonoBehaviour
             StopSimulation();
             videoPlayer.clip = DoNothing;
             videoPlayer.Play();
-            Debug.Log("Cari Tempat Berlindung");
 
             Message[0].text = "ADUH!";
             Message[1].text = 00.ToString();
