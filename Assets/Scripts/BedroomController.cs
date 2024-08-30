@@ -145,6 +145,7 @@ public class BedroomController : MonoBehaviour
     }
     private void WinEnding()
     {
+        ShowPoint();
         if (highScore < 100)
             PlayerPrefs.SetInt("ThirdHighScore", 100);
 

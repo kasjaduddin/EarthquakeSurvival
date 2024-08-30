@@ -74,7 +74,7 @@ public class KitchenController : MonoBehaviour
         Vector3 playerPosition = Player.transform.position;
         if (!Fire.activeSelf)
         {
-            if (playerPosition.z > 82.8f && (playerPosition.x > -6.7f && playerPosition.x < -5.4f))
+            if (playerPosition.z > 83.5f && (playerPosition.x > -6.1f && playerPosition.x < -4.4f))
             {
                 StopSimulation();
                 WinEnding();
@@ -120,6 +120,7 @@ public class KitchenController : MonoBehaviour
     }
     private void WinEnding()
     {
+        ShowPoint();
         if (highScore < 100)
             PlayerPrefs.SetInt("SecondHighScore", 100);
 

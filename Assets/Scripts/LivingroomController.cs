@@ -110,6 +110,7 @@ public class LivingroomController : MonoBehaviour
     }
     private void WinEnding()
     {
+        ShowPoint();
         if (highScore < 100)
             PlayerPrefs.SetInt("FirstHighScore", 100);
 

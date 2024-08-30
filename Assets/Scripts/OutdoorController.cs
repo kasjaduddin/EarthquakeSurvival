@@ -116,6 +116,7 @@ public class OutdoorController : MonoBehaviour
     }
     private void WinEnding()
     {
+        ShowPoint();
         if (highScore < 100)
             PlayerPrefs.SetInt("FourthHighScore", 100);
 
