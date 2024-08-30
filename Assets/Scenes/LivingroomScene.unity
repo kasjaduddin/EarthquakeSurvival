@@ -604,6 +604,10 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 8200732781179032876, guid: 14fb0af30df2e194fb6b4b8f4104f015, type: 3}
+    - target: {fileID: 446725404470374356, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 489269700636883546, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -648,10 +652,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1758317571836278975, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2747488968949691057, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3742816975750583187, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -5080471467741460837, guid: 14fb0af30df2e194fb6b4b8f4104f015, type: 3}
+    - target: {fileID: 3742816975750583187, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3774145020151297723, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
       propertyPath: m_LocalRotation.w
       value: -0.7071068
@@ -732,6 +748,14 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: -8499168350045265115, guid: 14fb0af30df2e194fb6b4b8f4104f015, type: 3}
+    - target: {fileID: 8690997335878373271, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8941843922890704703, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9219102095648102262, guid: 90b127c96c95ea9448dc98726389431b, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -2988,7 +3012,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -2818625243639125245, guid: 03391d374325875489bdd48d08b83ade, type: 3}
 --- !u!1001 &918229420
