@@ -71,13 +71,13 @@ public class LivingroomController : MonoBehaviour
     private void DetermineEnding()
     {
         Vector3 playerPosition = Player.transform.position;
-        if (playerPosition.x < 11 && playerPosition.z < 4.5)
+        if (playerPosition.x < 2.8f && playerPosition.z < 3f)
         {
             StopSimulation();
             WinEnding();
             ending = true;
         }
-        else if (playerPosition.x < 7.5)
+        else if (playerPosition.x < 1.8f)
         {
             StopSimulation();
             videoPlayer.clip = ExitRoom;
