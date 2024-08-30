@@ -74,7 +74,7 @@ public class KitchenController : MonoBehaviour
         Vector3 playerPosition = Player.transform.position;
         if (!Fire.activeSelf)
         {
-            if (playerPosition.z > 80f && (playerPosition.x > 2f && playerPosition.x < 6.5f))
+            if (playerPosition.z > 82.8f && (playerPosition.x > -6.7f && playerPosition.x < -5.4f))
             {
                 StopSimulation();
                 WinEnding();
