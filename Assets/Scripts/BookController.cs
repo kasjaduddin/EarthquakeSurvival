@@ -68,10 +68,6 @@ public class BookController : MonoBehaviour
         {
             Title.text = "????";
             Body.text = "Panduan keselamatan belum ditemukan. Ayo eksplorasi lagi untuk menemukan halaman ini!";
-            if (index - 4 >= 0)
-            {
-                ImageNumber[index - 4].SetActive(false);
-            }
             ImageNumber[index - 3].SetActive(true);
         }
         else
@@ -87,6 +83,9 @@ public class BookController : MonoBehaviour
         {
             guideIndex++;
             GuideImage[guideIndex-1].SetActive(false);
+            if (guideIndex - 4 >= 0)
+                ImageNumber[guideIndex - 4].SetActive(false);
+
             ShowGuide(guideIndex);
 
             if (guideIndex == 6)
@@ -106,7 +105,11 @@ public class BookController : MonoBehaviour
     private void ResetGuide()
     {
         guideIndex = 0;
-        ImageNumber[3].SetActive(false);
+        TextButton.text = "NEXT";
+        if (ImageNumber[3].activeSelf)
+            ImageNumber[3].SetActive(false);
+        if (GuideImage[6].activeSelf)
+            GuideImage[6].SetActive(false);
         ShowGuide(guideIndex);
     }
 }

@@ -24,7 +24,7 @@ public class GamePlayMenuController : MonoBehaviour
     private void SetCanvasRotation(Camera camera, GameObject canvas)
     {
         canvas.transform.rotation = camera.transform.rotation;
-        Vector3 newPosition = camera.transform.position + camera.transform.forward * .5f;
+        Vector3 newPosition = camera.transform.position + camera.transform.forward * 1f;
         canvas.transform.position = newPosition;
     }
     public void PlayAgain()
