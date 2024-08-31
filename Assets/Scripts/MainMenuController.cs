@@ -18,7 +18,6 @@ public class MainMenuController : MonoBehaviour
         highScore[0] = PlayerPrefs.GetInt("FirstHighScore");
         highScore[1] = PlayerPrefs.GetInt("SecondHighScore");
         highScore[2] = PlayerPrefs.GetInt("ThirdHighScore");
-        highScore[3] = PlayerPrefs.GetInt("FourthHighScore");
     }
     private void SetCanvasPosition()
     {
@@ -46,13 +45,8 @@ public class MainMenuController : MonoBehaviour
     }
     public void ThirdChapterDetail()
     {
-        ChapterDetail.text = "CHAPTER 3: Bedroom";
+        ChapterDetail.text = "CHAPTER 3: Outdoor";
         ChapterScore.text = "HIGHSCORE: " + highScore[2].ToString();
-    }
-    public void FourthChapterDetail()
-    {
-        ChapterDetail.text = "CHAPTER 4: Outdoor";
-        ChapterScore.text = "HIGHSCORE: " + highScore[3].ToString();
     }
     public void PlayChapterOne() 
     {
@@ -63,10 +57,6 @@ public class MainMenuController : MonoBehaviour
         SceneManager.LoadScene("KitchenScene");
     }
     public void PlayChapterThree()
-    {
-        SceneManager.LoadScene("BedroomScene");
-    }
-    public void PlayChapterFour()
     {
         SceneManager.LoadScene("OutdoorScene");
     }

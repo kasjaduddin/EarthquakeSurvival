@@ -35,7 +35,7 @@ public class OutdoorController : MonoBehaviour
     void Start()
     {
         videoPlayer = Video.GetComponentInChildren<VideoPlayer>();
-        highScore = PlayerPrefs.GetInt("FourthHighScore");
+        highScore = PlayerPrefs.GetInt("ThirdHighScore");
         startTime = Time.time;
         ending = false;
         PlaySimulation();
@@ -118,7 +118,7 @@ public class OutdoorController : MonoBehaviour
     {
         ShowPoint();
         if (highScore < 100)
-            PlayerPrefs.SetInt("FourthHighScore", 100);
+            PlayerPrefs.SetInt("ThirdHighScore", 100);
 
         Message[0].text = "Pilihan Bijak!";
         Message[1].text = 100.ToString();

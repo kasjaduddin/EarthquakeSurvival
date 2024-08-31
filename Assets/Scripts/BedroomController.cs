@@ -81,7 +81,7 @@ public class BedroomController : MonoBehaviour
     private void DetermineEnding()
     {
         Vector3 playerPosition = Player.transform.position;
-        if (CoverHeadWithPillow())
+        if (GrabPillow() && CoverHeadWithPillow())
         {
             StopSimulation();
             WinEnding();

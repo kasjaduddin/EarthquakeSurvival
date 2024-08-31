@@ -23,8 +23,8 @@ public class BookController : MonoBehaviour
     [SerializeField]
     private GameObject SafetyBook;
 
-    string[,] Guide = new string[7,2];
-    int[] unlockedGuide = new int[7];
+    string[,] Guide = new string[6,2];
+    int[] unlockedGuide = new int[6];
     int guideIndex;
 
     private void Awake()
@@ -50,17 +50,14 @@ public class BookController : MonoBehaviour
         Guide[3, 1] = "Tidak ada yang tahu kondisi di luar. Sebaiknya tetap dalam ruangan hingga kondisi membaik";
         Guide[4, 0] = "TURN OFF FIRE";
         Guide[4, 1] = "Perhatikan api, air, dan listrik! Pastikan tidak terjadi bencana lain karena kelalaian";
-        Guide[5, 0] = "AVOID FRAGLE";
-        Guide[5, 1] = "Gempa mampu memberi guncangan yang besar. Jauhi benda-benda yang mudah pecah dan terjatuh";
-        Guide[6, 0] = "AVOID TREE";
-        Guide[6, 1] = "Tetaplah di ruang terbuka! Pohon, tiang, ataupun bangunan bisa saja terjatuh";
+        Guide[5, 0] = "AVOID TREE";
+        Guide[5, 1] = "Tetaplah di ruang terbuka! Pohon, tiang, ataupun bangunan bisa saja terjatuh";
     }
     private void GetUnlockedGuide()
     {
         unlockedGuide[3] = PlayerPrefs.GetInt("FourthGuide");
         unlockedGuide[4] = PlayerPrefs.GetInt("FifthGuide");
         unlockedGuide[5] = PlayerPrefs.GetInt("SixthGuide");
-        unlockedGuide[6] = PlayerPrefs.GetInt("SeventhGuide");
     }
     private void ShowGuide(int index)
     {
@@ -79,23 +76,25 @@ public class BookController : MonoBehaviour
     }
     public void NextGuide()
     {
-        if (guideIndex < 6)
+        if (guideIndex < 5)
         {
             guideIndex++;
             GuideImage[guideIndex-1].SetActive(false);
-            if (guideIndex - 4 >= 0)
-                ImageNumber[guideIndex - 4].SetActive(false);
+            if (guideIndex - 3 >= 0)
+                ImageNumber[guideIndex - 3].SetActive(false);
 
             ShowGuide(guideIndex);
 
-            if (guideIndex == 6)
+            if (guideIndex == 5)
             {
                 TextButton.text = "Main Menu";
             }
         }
         else
         {
+            Debug.Log(guideIndex);
             ResetGuide();
+            Debug.Log("Reset");
             GameName.SetActive(true);
             ButtonMenu.SetActive(true);
             SafetyBook.SetActive(false);
@@ -106,10 +105,10 @@ public class BookController : MonoBehaviour
     {
         guideIndex = 0;
         TextButton.text = "NEXT";
-        if (ImageNumber[3].activeSelf)
-            ImageNumber[3].SetActive(false);
-        if (GuideImage[6].activeSelf)
-            GuideImage[6].SetActive(false);
+        if (ImageNumber[2].activeSelf)
+            ImageNumber[2].SetActive(false);
+        if (GuideImage[5].activeSelf)
+            GuideImage[5].SetActive(false);
         ShowGuide(guideIndex);
     }
 }
