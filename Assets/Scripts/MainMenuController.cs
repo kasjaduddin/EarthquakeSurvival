@@ -26,7 +26,7 @@ public class MainMenuController : MonoBehaviour
         float cameraY = camera.transform.position.y;
         Vector3 canvasPosition = canvas.transform.position;
 
-        canvasPosition.y = cameraY;
+        canvasPosition.y = cameraY + 1.5f;
         canvas.transform.position = canvasPosition;
     }
     public void QuitGame()

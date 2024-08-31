@@ -29,7 +29,7 @@ public class CreditController : MonoBehaviour
         text[1, 0] = "ASSETS";
         text[1, 1] = "UNITY\r\nVR Template\r\n\r\nUNITY ASSET\r\nVefects\r\n\r\nMETA\r\nOculus Hand\r\n\r\nGOOGLE\r\nGoogle Fonts";
         text[2, 0] = "ASSETS";
-        text[2, 1] = "FLATICON\r\nFreepik\r\nKiranshastry\r\nLeremy\r\nverry purnomo\r\nnawicon\r\nSaepul Nahwa\r\nkerismaker";
+        text[2, 1] = "FLATICON\r\nFreepik\r\nKiranshastry\r\nLeremy\r\nverry purnomo\r\nnawicon\r\nSaepul Nahwa\r\nkerismaker\r\n\r\nPIXABAY\r\n\rAmaksi";
         text[3, 0] = "ASSETS";
         text[3, 1] = "CGTRADER\r\nbalintpeter\r\nkarthikeyan1331\r\nmiska-tervo05\r\nsaar137\r\ntangquidong\r\ncavitbarisbalta\r\namaan-des1\r\nxfrog\r\n3DHaupt";
 
@@ -57,7 +57,7 @@ public class CreditController : MonoBehaviour
             case 2:
                 Title.text = text[2, 0];
                 Body.text = text[2, 1];
-                Body.fontSize = 85;
+                Body.fontSize = 75;
                 break;
             case 3:
                 Title.text = text[3, 0];

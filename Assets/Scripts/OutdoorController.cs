@@ -74,8 +74,8 @@ public class OutdoorController : MonoBehaviour
             videoPlayer.clip = AroundTree;
             videoPlayer.Play();
 
-            if (PlayerPrefs.GetInt("SeventhGuide") != 1)
-                PlayerPrefs.SetInt("SeventhGuide", 1);
+            if (PlayerPrefs.GetInt("SixthGuide") != 1)
+                PlayerPrefs.SetInt("SixthGuide", 1);
 
             Message[0].text = "AWAS!";
             Message[1].text = 00.ToString();
@@ -85,7 +85,7 @@ public class OutdoorController : MonoBehaviour
         }
         else 
         {
-            if (Time.time - startTime >= 45f)
+            if (Time.time - startTime >= 20f)
             {
                 StopSimulation();
                 WinEnding();

@@ -74,7 +74,7 @@ public class KitchenController : MonoBehaviour
         Vector3 playerPosition = Player.transform.position;
         if (!Fire.activeSelf)
         {
-            if (playerPosition.z > 83.5f && (playerPosition.x > -6.1f && playerPosition.x < -4.4f))
+            if (playerPosition.z > -.9f && (playerPosition.x > 3f && playerPosition.x <5.2f))
             {
                 StopSimulation();
                 WinEnding();
@@ -101,7 +101,7 @@ public class KitchenController : MonoBehaviour
         }
         else 
         {
-            if (Time.time - startTime >= 30f)
+            if (Time.time - startTime >= 20f)
             {
                 StopSimulation();
                 videoPlayer.clip = DoesntTurnOffStove;

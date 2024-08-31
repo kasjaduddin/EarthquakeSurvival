@@ -71,7 +71,7 @@ public class LivingroomController : MonoBehaviour
     private void DetermineEnding()
     {
         Vector3 playerPosition = Player.transform.position;
-        if (playerPosition.x < 2.8f && playerPosition.z < 3f)
+        if (playerPosition.x < 2.8f && playerPosition.z < .85f)
         {
             StopSimulation();
             WinEnding();
@@ -95,7 +95,7 @@ public class LivingroomController : MonoBehaviour
             Invoke("ShowPoint", 1.8f);
             ending = true;
         }
-        else if (Time.time - startTime >= 45f)
+        else if (Time.time - startTime >= 30f)
         {
             StopSimulation();
             videoPlayer.clip = DoNothing;

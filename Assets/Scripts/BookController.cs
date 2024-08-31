@@ -80,8 +80,8 @@ public class BookController : MonoBehaviour
         {
             guideIndex++;
             GuideImage[guideIndex-1].SetActive(false);
-            if (guideIndex - 3 >= 0)
-                ImageNumber[guideIndex - 3].SetActive(false);
+            if (guideIndex - 4 >= 0)
+                ImageNumber[guideIndex - 4].SetActive(false);
 
             ShowGuide(guideIndex);
 
